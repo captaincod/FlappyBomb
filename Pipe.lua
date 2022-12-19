@@ -10,8 +10,6 @@ local images = {
     ['4'] = love.graphics.newImage('src/images/pipe4.png')
 }
 
--- local pipe_image = love.graphics.newImage('src/images/pipe3.png')
-
 function Pipe:init(orientation, y)
     self.x = virtual_width
     self.y = y
@@ -20,10 +18,6 @@ function Pipe:init(orientation, y)
     self.height = pipe_height
     self.orientation = orientation
 end
-
--- function Pipe:update(dt)
---     self.x = self.x + pipe_scroll * dt
--- end
 
 function Pipe:render()
     love.graphics.draw(self.image, self.x, 

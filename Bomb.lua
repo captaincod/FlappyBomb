@@ -1,6 +1,6 @@
 Bomb = Class{}
 
-local gravity = 13
+local gravity = 25
 
 function Bomb:init()
     self.image = love.graphics.newImage('src/images/bomb.png')
@@ -18,7 +18,7 @@ function Bomb:update(dt)
 
     -- jump
     if love.keyboard.wasPressed('space') then
-        self.dy = -3
+        self.dy = -5
     end
 
     self.y = self.y + self.dy

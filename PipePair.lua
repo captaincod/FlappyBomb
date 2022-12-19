@@ -1,10 +1,10 @@
 PipePair = Class{}
 
-gap_height = 80
-pipe_speed = 85
+gap_height = 82
+pipe_speed = 75
 
 function PipePair:init(y)
-    self.x = virtual_width + 32
+    self.x = virtual_width + 5
     self.y = y
     self.pipes = {
         ['upper'] = Pipe('top', self.y),
