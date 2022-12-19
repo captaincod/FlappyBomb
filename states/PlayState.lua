@@ -5,15 +5,14 @@ function PlayState:init()
     self.pipePairs = {}
     self.timer = 0
     self.score = 0
-    self.lastY = -pipe_height + math.random(100) + 60
+    self.lastY = -pipe_height + math.random(100) + 55
 end
 
 function PlayState:update(dt)
     self.timer = self.timer + dt
     if self.timer > 2 then
-        -- no higher than 20 pixels below the top, no lower than a gap
-        local y = math.max(-pipe_height + 30, 
-            math.min(self.lastY + math.random(-30, 30), virtual_height - gap_height - pipe_height))
+        local y = math.max(-pipe_height + 20, 
+            math.min(self.lastY + math.random(-40, 40), virtual_height - gap_height - pipe_height - 20))
         self.lastY = y
         
         table.insert(self.pipePairs, PipePair(y))

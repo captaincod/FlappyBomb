@@ -22,5 +22,7 @@ end
 
 function CountdownState:render()
     love.graphics.setFont(fonts['countFont'])
-    love.graphics.printf(tostring(self.count), 0, 120, virtual_width, 'center')
+    love.graphics.printf(tostring(self.count), 0, 110, virtual_width, 'center')
+    love.graphics.setFont(fonts['mediumFont'])
+    love.graphics.printf('SPACE для прыжка', 0, 180, virtual_width, 'center')
 end

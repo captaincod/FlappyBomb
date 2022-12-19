@@ -1,7 +1,7 @@
 PipePair = Class{}
 
-gap_height = 85
-pipe_speed = 80
+gap_height = 80
+pipe_speed = 85
 
 function PipePair:init(y)
     self.x = virtual_width + 32

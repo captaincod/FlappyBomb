@@ -1,13 +1,13 @@
 Bomb = Class{}
 
-local gravity = 15
+local gravity = 13
 
 function Bomb:init()
     self.image = love.graphics.newImage('src/images/bomb.png')
     self.width = self.image:getWidth()
     self.height = self.image:getHeight()
 
-    self.x = virtual_width / 2 - (self.width / 2)
+    self.x = virtual_width /3 - (self.width / 2)
     self.y = virtual_height / 2 - (self.height / 2)
 
     self.dy = 0
@@ -25,10 +25,8 @@ function Bomb:update(dt)
 end
 
 function Bomb:collides(pipe)
-    local top_offset = 2
-    local bottom_offset = 4
-    if (self.x + top_offset) + (self.width - bottom_offset) >= pipe.x and self.x + top_offset <= pipe.x + pipe_width then
-        if (self.y + top_offset) + (self.height - bottom_offset) >= pipe.y and self.y + top_offset <= pipe.y + pipe_height then
+    if (self.x + 2) + (self.width - 4) >= pipe.x and self.x + 2 <= pipe.x + pipe_width then
+        if (self.y + 8) + (self.height - 16) >= pipe.y and self.y + 8 <= pipe.y + pipe_height then
             return true
         end
     end
